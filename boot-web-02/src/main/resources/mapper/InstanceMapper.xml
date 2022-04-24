@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.learn.admin.mapper.InstanceMapper">
+    <select id="InstanceList" resultType="com.learn.admin.bean.Instance">
+        select * from instancetable where owner = #{username}
+    </select>
+
+    <select id="RemainingInstance" resultType="com.learn.admin.bean.Instance">
+        select * from instancetable where owner = 'root'
+    </select>
+
+
+</mapper>
