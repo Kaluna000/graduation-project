@@ -14,7 +14,7 @@ export default {
     return {
       connectData:{
         operate:'connect',
-        host:'106.14.31.145',
+        host:'139.224.245.38',
         // host:'139.224.189.192',
         port:this.$store.state.nowNodePort,
         username: 'root',//用户名

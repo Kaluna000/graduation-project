@@ -134,6 +134,7 @@ export default {
               if (code === 200) {
                 alert("订单提交，"+this.applicationInfo.podName
                     )
+                //充值成功，返回上一页
                 this.$router.back()
               } //this.$router.push根据路由将query里面的信息push给/success
               else {

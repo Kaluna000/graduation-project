@@ -69,7 +69,7 @@ export default {
       })
     },
   },
-  //向全局事件总线注册事件
+  //向全局事件总线注册事件，也可以路由直接跳转
   mounted() {
     this.$bus.$on('showOverview',this.showOverview)
     this.$bus.$on('showPodsPage',this.showPodsPage)

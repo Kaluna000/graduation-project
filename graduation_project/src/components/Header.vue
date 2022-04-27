@@ -113,14 +113,14 @@ export default {
       this.$bus.$emit('showOverview')
     },
     goPodsPage(){
-      if (localStorage.getItem('nowInstance') === null || localStorage.getItem('nowInstance') === ''){
+      if (this.$store.state.nowInstance === null || this.$store.state.nowInstance === ''){
         alert("请先选择实例！！")
       }else {
         this.$bus.$emit('showPodsPage')
       }
     },
     goDeploymentsPage(){
-      if (localStorage.getItem('nowInstance') === null || localStorage.getItem('nowInstance') === ''){
+      if (this.$store.state.nowInstance === null || this.$store.state.nowInstance === ''){
         alert("请先选择实例！！")
       }else {
         this.$bus.$emit('showDeploymentsPage')
@@ -133,7 +133,7 @@ export default {
 
     },
     goServicePage(){
-      if (localStorage.getItem('nowInstance') === null || localStorage.getItem('nowInstance') === ''){
+      if (this.$store.state.nowInstance === null || this.$store.state.nowInstance === ''){
         alert("请先选择实例！！")
       }else {
         this.$bus.$emit('showServicePage')
@@ -165,8 +165,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('InstanceList',localStorage.getItem('Username'))
-    this.$store.commit('ChangeNowInstance',localStorage.getItem('nowInstance'))
+    this.$store.dispatch('InstanceList',this.$store.state.user.username)
   }
 }
 </script>

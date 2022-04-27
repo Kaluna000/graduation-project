@@ -27,7 +27,7 @@ export default {
             let code = response.data.code
             if (code === 200){
               alert("释放成功！")
-              this.$store.dispatch('InstanceList',localStorage.getItem('Username'))
+              this.$store.dispatch('InstanceList',this.$store.state.user.username)
             }else {
               alert("释放失败:"+response.data.message)
             }

@@ -102,6 +102,7 @@ export default {
           })
           .catch(() => {});
     },
+    //删除指定行的deployment
     deleteDeployment(row){
       this.loading = true
       this.$store
@@ -109,14 +110,14 @@ export default {
             instanceName:this.$store.state.nowInstance,
             deploymentName:row.name,
             namespace:row.namespace
-          })//读取loginForm里面的username和password
+          })
           .then(response => {//声明response变量，类型是json
             this.loading = false;
             let code = response.data.code;//后端传给前端的值为data，code，message，传值给code
             if (code === 200) {
               alert("删除成功！！！")
               this.$store.dispatch('getDeploymentList',this.$store.state.nowInstance)
-            } //this.$router.push根据路由将query里面的信息push给/success
+            }
             else {
               alert("删除失败！！！："+response.data.message)
             }

@@ -14,8 +14,8 @@ export default {
     return {
       connectData:{
         operate:'connect',
-        host:this.$store.state.instanceList.filter(item => item.name == this.$store.state.nowInstance).pop().ip,
-        // host:'139.224.189.192',
+        // host:this.$store.state.instanceList.filter(item => item.name == this.$store.state.nowInstance).pop().ip,
+        host:'139.224.245.38',
         port: '22',//端口号
         username: 'root',//用户名
         password: 'LuoRan2000',

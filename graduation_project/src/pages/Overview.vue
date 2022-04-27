@@ -116,7 +116,7 @@ export default {
   },
   mounted() {
     this.serviceInfo.instanceName = this.$store.state.nowInstance
-    this.serviceInfo.username = localStorage.getItem('Username')
+    this.serviceInfo.username = this.$store.state.user.username
     this.$store.dispatch('InstanceList',this.serviceInfo.username)
     this.$store.dispatch('getNamespacedService',this.serviceInfo)
     this.$store.dispatch('getNamespacedPodList',{

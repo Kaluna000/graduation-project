@@ -45,7 +45,7 @@ public class LoginController {
             return CommonResult.success(username);
         }
         else{
-            return CommonResult.validateFailed("我是后端Controller,登陆失败");
+            return CommonResult.validateFailed("用户名或密码错误！");
         }
     }
 

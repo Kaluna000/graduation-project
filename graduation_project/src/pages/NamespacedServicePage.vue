@@ -104,6 +104,7 @@ export default {
     }
   },
   methods:{
+    //进入特定行实例的shell界面
     goTerminal(row) {
       this.$store.commit('ChangeNowNodePort',row.nodePort)
       this.$router.push({
@@ -138,7 +139,7 @@ export default {
               alert("实例释放成功！！！")
               this.$store.dispatch('getNamespacedService',this.serviceInfo)
               this.$store.dispatch('getNamespacedPodList',this.serviceInfo)
-            } //this.$router.push根据路由将query里面的信息push给/success
+            }
             else {
               alert("实例释放失败！！！："+response.data.message)
             }
@@ -170,7 +171,7 @@ export default {
   },
   mounted() {
     this.serviceInfo.instanceName = this.$store.state.nowInstance
-    this.serviceInfo.username = localStorage.getItem('Username')
+    this.serviceInfo.username = this.$store.state.user.username
     this.$store.dispatch('getNamespacedService',this.serviceInfo)
     this.$store.dispatch('getNamespacedPodList',this.serviceInfo)
 

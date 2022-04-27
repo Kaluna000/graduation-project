@@ -7,7 +7,6 @@ import ServicePage from "@/pages/ServicePage";
 import AccountPage from "@/pages/AccountPage";
 import Login from "@/pages/Login";
 // import LoginSuccess from "@/components/LoginSuccess";
-import LoginError from "@/components/LoginError";
 import IndexPage from "@/pages/IndexPage";
 import Overview from "@/pages/Overview";
 import Xterminal from "@/pages/Xterminal";
@@ -73,10 +72,7 @@ const router = new VueRouter({
             path:'/',
             component:Login
         },
-        {
-          path:'/loginError',
-          component:LoginError
-        },
+
         {
             path:'/webssh',
             component:Xterminal

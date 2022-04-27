@@ -10,7 +10,7 @@
         <div style="text-align: center">
 <!--          <el-icon class="el-icon-house" style="width: 56px;height: 56px;color: #409EFF"></el-icon>-->
         </div>
-        <h2 class="login-title color-main">element-ui登录器</h2>
+        <h2 class="login-title color-main">平台登陆器</h2>
         <el-form-item prop="username">
           <el-input
               name="username"
@@ -96,7 +96,7 @@ export default {
                   this.$router.push({
                     path: "/index",
                   });
-                } //this.$router.push根据路由将query里面的信息push给/success
+                }
                 else {
                   alert("登陆失败："+response.data.message)
                 }
@@ -123,7 +123,7 @@ export default {
                 let code = response.data.code;//后端传给前端的值为data，code，message，传值给code
                 if (code === 200) {
                   alert("注册成功！请登录")
-                } //this.$router.push根据路由将query里面的信息push给/success
+                }
                 else {
                   alert("注册失败失败："+response.data.message)
                 }

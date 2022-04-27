@@ -7,7 +7,7 @@
 <!--    </el-card>-->
     <el-card class="box-card" shadow="always" style="width: 70%;margin-left: 30%;transform: translateY(100%)">
       <el-row type="flex" justify="start" :gutter="20" style="transform: translateY(-20%)">
-        <el-button type="primary" @click="goApplicationPage">申请实例</el-button>
+        <el-button type="primary" @click="goApplicationPage">注册实例</el-button>
       </el-row>
       <el-row type="flex" justify="center" :gutter="20" style="margin-left: 3px">
         <el-col :span="6">实例ID</el-col>
@@ -46,7 +46,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('InstanceList',localStorage.getItem('Username'))
+    this.$store.dispatch('InstanceList',this.$store.state.user.username)
   }
 }
 </script>

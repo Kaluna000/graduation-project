@@ -55,7 +55,7 @@ const state = {
         memory:'',
         running:''
     }],
-    nowInstance: '',
+    nowInstance: 'master1',
     podList:[],
     deploymentList:[],
     serviceList:[],

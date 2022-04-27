@@ -12,7 +12,7 @@
           <el-table
               :data="userRecordList"
               style="width: 850px"
-              height="250">
+              height="350">
             <el-table-column
                 prop="username"
                 label="用户"
